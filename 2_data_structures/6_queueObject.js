@@ -17,9 +17,26 @@ class Queue {
   print() {
     console.log(this.items);
   }
+  isEmpty() {
+    return this.rear - this.front === 0;
+  }
+  size() {
+    return this.rear - this.front;
+  }
+  peek() {
+    return this.items[this.front];
+  }
 }
 const que = new Queue();
 que.enqueue(454);
 que.print();
+que.print();
+
+que.enqueue(555);
+que.print();
+
+que.enqueue(666);
+que.print();
 console.log("this return the value of deleted key value pair" + que.dequeue());
+
 que.print();
